@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 389.9 380.5" style="enable-background:new 0 0 389.9 380.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.2;fill:#19192D;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;enable-background:new    ;}
+	.st1{opacity:0.2;fill:#FFFFFF;enable-background:new    ;}
+	.st2{font-family:'Gilroy-Bold';}
+	.st3{font-size:49px;}
+	.st4{opacity:0.2;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;enable-background:new    ;}
+	.st5{opacity:0.2;}
+	.st6{fill:#FFFFFF;}
+	.st7{font-family:'Gilroy-Medium';}
+	.st8{font-size:20.2006px;}
+	.st9{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#005DD0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M387.4,19.6v341.3c0,9.5-7.7,17.1-17.1,17.1H19.6c-9.5,0-17.1-7.7-17.1-17.1V19.6c0-9.5,7.7-17.1,17.1-17.1
+		h350.7C379.8,2.5,387.4,10.2,387.4,19.6z"/>
+	<text transform="matrix(1 0 0 1 96.5118 90.8444)" class="st1 st2 st3">Tuesday</text>
+	<line class="st4" x1="11" y1="134.6" x2="382.4" y2="134.6"/>
+	<g class="st5">
+		<text transform="matrix(1 0 0 1 135.4098 319.6481)" class="st6 st7 st8">Heavy rain</text>
+	</g>
+	<g class="st5">
+		<g>
+			<g>
+				<path class="st9" d="M253.4,204.2c0.6-1.8,0.9-3.8,0.9-5.8c0-10.6-8.6-19.1-19.1-19.1c-3,0-5.9,0.7-8.4,2
+					c-3.5-13.2-15.6-22.9-29.9-22.9c-15.8,0-28.8,11.8-30.7,27c-2.5-1.4-5.3-2.2-8.3-2.2c-9.3,0-16.8,7.5-16.8,16.8
+					c0,1,0.1,2,0.3,2.9h-1.3c-8.1,0-14.7,6.6-14.7,14.7c0,8.1,6.6,14.7,14.7,14.7h107.4c8.1,0,14.7-6.6,14.7-14.7
+					C262,211.7,258.5,206.6,253.4,204.2z"/>
+			</g>
+		</g>
+		<g>
+			<line class="st10" x1="159.4" y1="243.6" x2="150" y2="259.9"/>
+			<line class="st10" x1="191.2" y1="243.6" x2="181.8" y2="259.9"/>
+			<line class="st10" x1="224.1" y1="243.6" x2="214.7" y2="259.9"/>
+		</g>
+		<g>
+			<line class="st10" x1="132.1" y1="263.3" x2="122.7" y2="279.6"/>
+			<line class="st10" x1="163.9" y1="263.3" x2="154.5" y2="279.6"/>
+			<line class="st10" x1="196.8" y1="263.3" x2="187.4" y2="279.6"/>
+			<line class="st10" x1="228.6" y1="263.3" x2="219.2" y2="279.6"/>
+		</g>
+	</g>
+</g>
+</svg>

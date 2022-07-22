@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 389.9 380.5" style="enable-background:new 0 0 389.9 380.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.2;fill:#19192D;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st1{opacity:0.2;}
+	.st2{fill:none;stroke:#E9A72D;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st4{opacity:0.2;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#005DD0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{opacity:0.2;fill:#FFFFFF;}
+	.st7{font-family:'Gilroy-Bold';}
+	.st8{font-size:49px;}
+	.st9{letter-spacing:1;}
+	.st10{fill:#FFFFFF;}
+	.st11{font-family:'Gilroy-Medium';}
+	.st12{font-size:20.2006px;}
+	.st13{fill:#54B5B1;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st14{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M387.4,19.6v341.3c0,9.5-7.7,17.1-17.1,17.1H19.6c-9.5,0-17.1-7.7-17.1-17.1V19.6c0-9.5,7.7-17.1,17.1-17.1
+		h350.7C379.8,2.5,387.4,10.2,387.4,19.6z"/>
+	<text transform="matrix(1 0 0 1 100.7022 90.8444)" class="st6 st7 st8 st9">Monday</text>
+	<line class="st4" x1="9.2" y1="134.6" x2="380.7" y2="134.6"/>
+	<g class="st1">
+		<text transform="matrix(1 0 0 1 147.7013 306.6487)"><tspan x="0" y="0" class="st10 st11 st12">Sunny with</tspan><tspan x="0.9" y="23.9" class="st10 st11 st12">high winds</tspan></text>
+	</g>
+	<g class="st1">
+		<g>
+			<path class="st3" d="M243.4,208.3c5.9,0,10.7,4.8,10.7,10.7s-4.8,10.7-10.7,10.7h-63"/>
+			<path class="st3" d="M268.6,218.9c5.9,0,10.7,4.8,10.7,10.7c0,5.9-4.8,10.7-9.1,10.7h-89.7"/>
+			<path class="st3" d="M262.2,272.4c5.9,0,10.7-4.8,10.7-10.7s-4.8-10.7-10.7-10.7h-81.7"/>
+		</g>
+		<g>
+			<g>
+				<path class="st2" d="M159.1,248.2c-8.2-6.7-13.4-16.8-13.4-28.1c0-20,16.2-36.3,36.3-36.3c16.9,0,31.1,11.5,35.1,27.2"/>
+				<line class="st2" x1="182" y1="156.4" x2="182" y2="173.3"/>
+				<line class="st2" x1="150.2" y1="164.9" x2="158.6" y2="179.5"/>
+				<line class="st2" x1="126.9" y1="188.3" x2="141.4" y2="196.7"/>
+				<line class="st2" x1="118.3" y1="220.1" x2="135.2" y2="220.1"/>
+				<line class="st2" x1="126.9" y1="251.9" x2="141.4" y2="243.5"/>
+				<line class="st2" x1="237.2" y1="188.3" x2="222.6" y2="196.7"/>
+				<line class="st2" x1="213.8" y1="164.9" x2="205.4" y2="179.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
