@@ -79,6 +79,7 @@ $(function() {
         }, 2000);
       });
 
+      
       $('.btn__home').click(function() {
         $('section').fadeOut(750);
         setTimeout(function() { 
