@@ -384,6 +384,7 @@ $(function() {
     } 
     if (userCharButtonClicks === 5) {
       userCharButtonClicks--;
+      $('.btn__select').removeClass('pe__none');
       $('.ucs__05').html("&nbsp;")
     }
     //nameProgress();
