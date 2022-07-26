@@ -65,9 +65,9 @@ $(function() {
         setTimeout(function() { 
             $('#weather').fadeIn();
         }, 2000);
-        setTimeout(function() { 
-          $('.btn__confirm__day__container').fadeIn(500).addClass('animate__animated animate__slideInUp');
-      }, 3000);
+      //   setTimeout(function() { 
+      //     $('.btn__confirm__day__container').fadeIn(500).addClass('animate__animated animate__slideInUp');
+      // }, 3000);
       });
       $('.bm05').click(function() {
         $('.mb05').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
@@ -969,6 +969,8 @@ $(function() {
 
   // Weather Check 
 
+  $('.btn__confirm__day__container').hide();
+  $('.btn__confirm__day__mon').hide();
   $('.btn__confirm__day__tue').hide();
   $('.btn__confirm__day__wed').hide();
 

@@ -949,84 +949,146 @@
   .mon, .tue, .wed, .temperature, .wind, .windspeed, .visability, .waveheight {
     transition: 0.4s;
   } 
+
+  .mon {
+    background: url(assets/07_weather/holder/mon.png) no-repeat;
+    background-size: contain;
+  }
+  .tue {
+    background: url(assets/07_weather/holder/tues.png) no-repeat;
+    background-size: contain;
+  }
+  .wed {
+    background: url(assets/07_weather/holder/weds.png) no-repeat;
+    background-size: contain;
+  }
+
+  .temperature {
+    background: url(assets/07_weather/holder/temp.png) no-repeat;
+    background-size: contain;
+  }
+
+  .wind {
+    background: url(assets/07_weather/holder/wind_dir.png) no-repeat;
+    background-size: contain;
+  }
+  .windspeed {
+    background: url(assets/07_weather/holder/wind_speed.png) no-repeat;
+    background-size: contain;
+  }
+
+  .visability {
+    background: url(assets/07_weather/holder/visability.png) no-repeat;
+    background-size: contain;
+  }
+
+  .waveheight {
+    background: url(assets/07_weather/holder/wave_height.png) no-repeat;
+    background-size: contain;
+    margin-left: 30px;
+  }
   
   .mon__01 {
     background: url(assets/07_weather/monday/SVG/SVG/SVG/mon.svg) no-repeat;
+    background-size: contain;
   }
   .tue__01 {
     background: url(assets/07_weather/monday/SVG/SVG/SVG/tues.svg) no-repeat;
+    background-size: contain;
   }
   .wed__01 {
     background: url(assets/07_weather/monday/SVG/SVG/SVG/wed.svg) no-repeat;
+    background-size: contain;
   }
   .temp__01 {
     background: url(assets/07_weather/monday/SVG/SVG/temp.svg) no-repeat;
+    background-size: contain;
   }
   .wind__01 {
     background: url(assets/07_weather/monday/SVG/SVG/wind.svg) no-repeat;
+    background-size: contain;
   }
   .windspeed__01 {
     background: url(assets/07_weather/monday/SVG/SVG/wind_speed.svg) no-repeat;
+    background-size: contain;
   }
   
   .visa__01 {
     background: url(assets/07_weather/monday/SVG/SVG/visability.svg) no-repeat;
+    background-size: contain;
   }
   .wave__01 {
     background: url(assets/07_weather/monday/SVG/SVG/wave_height.svg) right no-repeat;
+    background-size: contain;
   }
   
   .mon__02 {
     background: url(assets/07_weather/tuesday/SVG/mon.svg) no-repeat;
+    background-size: contain;
   }
   .tue__02 {
     background: url(assets/07_weather/tuesday/SVG/tues.svg) no-repeat;
+    background-size: contain;
   }
   .wed__02 {
     background: url(assets/07_weather/tuesday/SVG/wed.svg) no-repeat;
+    background-size: contain;
 
   }
   .temp__02 {
     background: url(assets/07_weather/tuesday/SVG/SVG/temp.svg) no-repeat;
+    background-size: contain;
   }
   .wind__02 {
     background: url(assets/07_weather/tuesday/SVG/SVG/wind.svg) no-repeat;
+    background-size: contain;
   }
   .windspeed__02 {
     background: url(assets/07_weather/tuesday/SVG/SVG/wind_speed.svg) no-repeat;
+    background-size: contain;
   }
   
   .visa__02 {
     background: url(assets/07_weather/tuesday/SVG/SVG/visability.svg) no-repeat;
+    background-size: contain;
   }
   .wave__02 {
     background: url(assets/07_weather/tuesday/SVG/SVG/wave_height.svg) right no-repeat;
+    background-size: contain;
   }
   
   .mon__03 {
     background: url(assets/07_weather/wednesday/mon.svg) no-repeat;
+    background-size: contain;
   }
   .tue__03 {
     background: url(assets/07_weather/wednesday/tues.svg) no-repeat;
+    background-size: contain;
   }
   .wed__03 {
     background: url(assets/07_weather/wednesday/wed.svg) no-repeat;
+    background-size: contain;
   }
   .temp__03 {
-    background: url(assets/07_weather/wednesday/SVG/temp_1.svg) no-repeat;
+    background: url(assets/07_weather/wednesday/SVG/temp.svg) no-repeat;
+    background-size: contain;
   }
   .wind__03 {
-    background: url(assets/07_weather/wednesday/SVG/wind_1.svg) no-repeat;
+    background: url(assets/07_weather/wednesday/SVG/wind.svg) no-repeat;
+    background-size: contain;
   }
   .windspeed__03 {
-    background: url(assets/07_weather/wednesday/SVG/wind_speed_1.svg) no-repeat;
+    background: url(assets/07_weather/wednesday/SVG/wind_speed.svg) no-repeat;
+    background-size: contain;
   }
   
   .visa__03 {
-    background: url(assets/07_weather/wednesday/SVG/visability_1.svg) no-repeat;
+    background: url(assets/07_weather/wednesday/SVG/visability.svg) no-repeat;
+    background-size: contain;
   }
   .wave__03 {
-    background: url(assets/07_weather/wednesday/SVG/wave_height_1.svg) right no-repeat;
+    background: url(assets/07_weather/wednesday/SVG/wave_height.svg) right no-repeat;
+    background-size: contain;
   }
   
   .border__none {
