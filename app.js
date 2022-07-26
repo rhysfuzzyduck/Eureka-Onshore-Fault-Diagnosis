@@ -16,6 +16,15 @@ $(function() {
         }, 1000);
       });
 
+      $('#info').click(function() {
+        $(this).fadeOut(750);
+        setTimeout(function() { 
+          $('#name').fadeIn();
+      }, 1000);
+      });
+
+
+
       $('.bm01').click(function() {
         $('.mb01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
         setTimeout(function() { 
@@ -119,6 +128,7 @@ $(function() {
   let numbers = ['1','2','3','4','5','6','7','8','9','0']
 
   var userCharButtonClicks = 0;
+  console.log(userCharButtonClicks);
 
   var chars = "";
   var numbs = "";
@@ -139,7 +149,7 @@ $(function() {
       // On dial rotation highlight letter 
       // + 7 to account for alphabet [start] array space
       // log 10deg rotation for each letter
-      console.log(curRotation);
+      //console.log(curRotation);
       if (curRotation >= 7 && curRotation <= 15) {
         chars = "a";
         $('path.d.alpha.letter-A').addClass('active');
@@ -189,8 +199,8 @@ $(function() {
         chars = "l";
         $('path.d.alpha.letter-L').addClass('active');
         $('.alpha').not('path.d.alpha.letter-L').removeClass('active');
-        chars = "m";
       } else if (curRotation >= 125 && curRotation <= 135) {
+        chars = "m";
         $('path.d.alpha.letter-M').addClass('active');
         $('.alpha').not('path.d.alpha.letter-M').removeClass('active');
       } else if (curRotation >= 135 && curRotation <= 145) {
@@ -291,7 +301,7 @@ $(function() {
     onDrag: function() {
       var dial2 = document.querySelectorAll(".dial2");
       var curRotation2 = gsap.getProperty("#dial2", "rotation");
-      console.log(curRotation2);
+      //console.log(curRotation2);
       // log 10deg rotation for each number
       if (curRotation2 >= 0 && curRotation2 <= 10) {
         numbs = "1";
@@ -348,7 +358,39 @@ $(function() {
     nameProgress();
   });
 
+  $('.btn__name__back').click(function() {
+    $('.btn__begin').addClass('btn__begin__not__active');
+    console.log(userCharButtonClicks);
+    if (userCharButtonClicks === 1) {
+      userCharButtonClicks = 0;
+      $('.ucs__01').html("&nbsp;")
+      // $(this).addClass('pe__none');
+    } 
+    if (userCharButtonClicks === 2) {
+      userCharButtonClicks--;
+      $('.ucs__02').html("&nbsp;")
+    }
+    if (userCharButtonClicks === 3) {
+      userCharButtonClicks--;
+      $('.ucs__03').html("&nbsp;")
+      $('.number__container').fadeOut();
+      $('.dial2').fadeOut();
+      $('.letter__container').fadeIn();
+      $('.dial').fadeIn();
+    } 
+    if (userCharButtonClicks === 4) {
+      userCharButtonClicks--;
+      $('.ucs__04').html("&nbsp;")
+    } 
+    if (userCharButtonClicks === 5) {
+      userCharButtonClicks--;
+      $('.ucs__05').html("&nbsp;")
+    }
+    //nameProgress();
+  });
+
   function nameProgress() {
+    console.log(userCharButtonClicks);
     if (userCharButtonClicks === 1) {
       $('.ucs__01').html(chars)
     } 
@@ -368,6 +410,7 @@ $(function() {
     if (userCharButtonClicks === 5) {
       $('.ucs__05').html(numbs)
       $('.btn__select').addClass('pe__none');
+      $('.btn__begin').removeClass('btn__begin__not__active');
     }
   }
 
