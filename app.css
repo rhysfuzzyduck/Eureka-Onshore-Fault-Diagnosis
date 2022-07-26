@@ -583,6 +583,16 @@
     display: none;
     pointer-events: none;
   }
+
+  .teddy {
+    background: url(assets/06_choosing_tools/tools/1x/teddy.png) no-repeat;
+    background-size: contain;
+    height: 241px;
+    width: 230px;
+    position: absolute;
+    top: 182px;
+    left: 801px;
+  }
   
   .hammer {
     background: url(assets/06_choosing_tools/1x/1x/hammer__time.png) no-repeat;
@@ -636,10 +646,10 @@
     background: url(assets/06_choosing_tools/tools/1x/allen.png) no-repeat;
     background-size: contain;
     height: 280px;
-    width: 110px;
+    width: 250px;
     position: absolute;
-    top: 465px;
-    left: 1454px;
+    top: 552px;
+    left: 1369px;
     z-index: 5000 !important;
 
   }
@@ -687,6 +697,11 @@
     background-size: contain !important;
     z-index: 5001 !important;
   }
+  .shadow__teddy {
+    background: url(assets/06_choosing_tools/tools/dragged/teddy.png) no-repeat !important;
+    background-size: contain !important;
+    z-index: 5001 !important;
+  }
   .shadow__ratchet {
     background: url(assets/06_choosing_tools/tools/dragged/ratchet_dragged.png) no-repeat !important;
     background-size: contain !important;
@@ -709,7 +724,7 @@
   }
   .shadow__ak {
     background: url(assets/06_choosing_tools/tools/dragged/allen_key.png) no-repeat !important;
-    background-size: cover !important;
+    background-size: contain !important;
   }
   .shadow__oil {
     background: url(assets/06_choosing_tools/tools/dragged/hose_dragged.png) no-repeat !important;
@@ -770,6 +785,10 @@
   }
   .card__tape {
    background: url(assets/06_choosing_tools/cards/1x/tape.png) no-repeat !important;
+   background-size: contain !important;
+  }
+  .card__teddy {
+   background: url(assets/06_choosing_tools/cards/1x/teddy.png) no-repeat !important;
    background-size: contain !important;
   }
   

@@ -14,18 +14,22 @@
 </head>
 <body>
     <main>
+
+        <section id="info"></section>
+
         <section id="name" style="display: none;">
             <div class="circle__container">
-                <div class="btn btn__select"></div>
+                <div class="btn btn__select op__on pe__none"></div>
                 <?xml version="1.0" encoding="UTF-8"?>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 833.72 833.72" class="dial__holder">
                     <defs>
                         <style>
-                            .d {
+                            #name .d {
                                 fill: #43414C;
                                 opacity: 1;
+                                stroke-width: 0.2px;
                             }
-                            .e {
+                            #name .e {
                                 fill: #19192d;
                             }
                             .f {
@@ -203,14 +207,25 @@
                 <div class="usr__char__selection ucs__05"></div>
             </div>
             <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Please use the dial to enter your username. You can use three letters and two numbers.
             </div>
 
-            <div class="btn btn__begin"></div>
+            <div class="btn__name__back"></div>
+
+            <div class="btn btn__begin  btn__begin__not__active"></div>
 
         </section>
 
-        <section id="menu"> 
+        <section id="menu" style="display: none;"> 
+            <div class="name__box">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
             <div class="grid">
                 <div class="btn__menu bm01">
                     <div class="btn mb01 btn__play"></div>
@@ -234,8 +249,16 @@
         </section>
 
         <section id="locating__faults" style="display: none;">
-            <a href="index.html" class=" btn btn__home"></a>
-            <div class="name__box"></div>
+            <a class=" btn btn__home"></a>
+            <div class="name__box">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
             <div class="lc__header"></div>
 
             <div class="faulty__turbs__number">
@@ -2277,7 +2300,16 @@
         </section>
 
         <section id="diagnosing__faults" style="display: none;">
-            <a href="index.html" class=" btn btn__home"></a>
+            <a class=" btn btn__home"></a>
+            <div class="name__box nb__alt">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
 
             <div class="hotspot hotspot01"></div>
             <div class="hotspot hotspot02"></div>
@@ -2306,8 +2338,8 @@
             </div>
 
             <div class="sidebar">
-                <div class="fault__card fc01 fault__card__border"></div>
-                <div class="fault__card fc02 fc__opacity"></div>
+                <div class="fault__card fc01"></div>
+                <div class="fault__card fc02 fc__opacity pe__none"></div>
             </div>
 
 
@@ -2323,13 +2355,26 @@
         </section>
 
         <section id="choosing__tools" style="display: none;"> 
-            <div class="name__box"></div>
-            <a href="index.html" class=" btn btn__home"></a>
-            <div class="tool__info"></div>
+            <div class="name__box">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
+            <a class=" btn btn__home"></a>
+            <div class="tool__info">
+                <div class="ci__gameply__info">
+                    <h1>Drag tools<br>to the bag<br>&#8595;</h1>
+                </div>
+            </div>
             <div class="tool__number">6</div> 
              
             <!-- Tools -->
-            <div class="hammer drag" id="drag"></div>
+            <!-- <div class="hammer drag" id="drag"></div> -->
+            <div class="teddy drag" id="drag"></div>
             <div class="ratchet drag" id="drag"></div>
             <div class="saw drag" id="drag"></div>
             <div class="tape drag" id="drag"></div>
@@ -2415,7 +2460,7 @@
                         #choosing__tools .y {
                             letter-spacing: 0.06em;
                         }
-                        #choosing__tools .a` {
+                        #choosing__tools .a {
                             fill: #f9b438;
                         }
                         #choosing__tools .aa,
@@ -2531,7 +2576,7 @@
                         #choosing__tools .s {
                             stroke: #19192d;
                         }
-                        #choosing__tools .b` {
+                        #choosing__tools .b {
                             isolation: isolate;
                         }
                         .t {
@@ -7883,7 +7928,17 @@
         </section>
 
         <section id="weather" style="display: none;">
-            <a href="index.html" class=" btn btn__home"></a>
+            <a class=" btn btn__home"></a>
+
+            <div class="name__box nb__alt">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
 
             <div class="container">
                 <div class="days">
@@ -7919,7 +7974,17 @@
         </section>
 
         <section id="buddyeq__check" style="display: none;">
-            <a href="index.html" class=" btn btn__home"></a>
+            <a class=" btn btn__home"></a>
+            <div class="name__box nb__alt">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
+
             <div class="modal__overlay mo__budeq">
                 <div class="modal__inner">
                 <div class="modal">
@@ -8018,7 +8083,7 @@
                             #buddyeq__check .y {
                                 fill: #c4c4c4;
                             }
-                            #buddyeq__check .a` {
+                            #buddyeq__check .a {
                                 fill: #e08d3b;
                             }
                             #buddyeq__check .aa {
@@ -8310,7 +8375,15 @@
 
         <section id="headoffshore" style="display: none;">
             <a href="index.html" class=" btn btn__home"></a>
-            <div class="name__box"></div>
+            <div class="name__box">
+                <div class="content">
+                    <div class="nb__ucs ucs__01"></div>
+                    <div class="nb__ucs ucs__02"></div>
+                    <div class="nb__ucs ucs__03"></div>
+                    <div class="nb__ucs ucs__04"></div>
+                    <div class="nb__ucs ucs__05"></div>
+                </div>
+            </div>
             <div class="content">
                 Video Coming Soon!
             </div>
@@ -8324,10 +8397,11 @@
     <script src="vendor/gsap/scrollMagic.min.js"></script>
     <script src="vendor/gsap/ScrollTrigger.min.js"></script>
     <script src="vendor/gsap/draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="vendor/jquery.ui.touch-punch"></script>
     <script src="vendor/touchpunch.min.js"></script>
     <script src="vendor/gsap/animation.gsap.js"></script>
     <script src="vendor/idle-timer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
 
 </body>

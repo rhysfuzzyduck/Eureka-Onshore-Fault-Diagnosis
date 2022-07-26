@@ -638,7 +638,7 @@ $(function() {
     var ak = $('.allen__key');
     var oil = $('.oil');
     var flask = $('.flask');
-    var hammer = $('.hammer');
+    var teddy = $('.teddy');
     var spanner = $('.spanner');
     var screw = $('.screw');
 
@@ -668,8 +668,8 @@ $(function() {
         zIndex: 9099,
         onDrag: function(e) {
           $(this.target).addClass("drag__active");
-          if ($(".hammer").hasClass("drag__active")) {
-            $('.hammer').addClass("shadow__hammer");
+          if ($(".teddy").hasClass("drag__active")) {
+            $('.teddy').addClass("shadow__teddy");
           }
           if ($(".ratchet").hasClass("drag__active")) {
             $('.ratchet').addClass("shadow__ratchet");
@@ -702,8 +702,8 @@ $(function() {
         onDragEnd: function(e) {
         $(this.target).removeClass("drag__active"); 
 
-        if (hammer) {
-          $('.hammer').removeClass("shadow__hammer");
+        if (teddy) {
+          $('.teddy').removeClass("shadow__teddy");
         }
         if (ratchet) {
           $('.ratchet').removeClass("shadow__ratchet");
@@ -735,7 +735,7 @@ $(function() {
         onDrop(this.target);
         if (this.hitTest(dropArea, overlapThreshold)) {
           $('.ci__gameply__info').hide();
-          if (this.hitTest(hammer)) {
+          if (this.hitTest(teddy)) {
             var overlapThreshold = "50%";
             //$(this.target).fadeIn();
             $('.dz__bg').addClass('red__flash');
@@ -749,16 +749,16 @@ $(function() {
               $('.dz__bg').removeClass('red__flash');
             }, 750);
             $(this.target).fadeIn();
-            console.log("hammer!")
+            console.log("teddy!")
             gsap.to(this.target, {
               x: 0,
               y: 0
             });
          
-              $('.tool__info').addClass('card__hammer');
+              $('.tool__info').addClass('card__teddy');
               $('.tool__info').removeClass('card__allen__key card__brush card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
               $('.drag').not($(this)).removeClass('drag__active');
-              $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/hammer.png)');  
+              $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/teddy.png)');  
             console.log(correctToolNumber);
             gsap.to(this.target, {
               x: 0,
@@ -788,7 +788,7 @@ $(function() {
             $('.tool__info').addClass('card__ratchet');
             $('.drag').not($(this)).removeClass('drag__active');
             $('.tool__info').removeClass('card__screw');
-            $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__brush card__saw card__screw card__flask card__spanner card__tape');
+            $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__brush card__saw card__screw card__flask card__spanner card__tape');
             // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/ratchet.png)'); 
             
           }
@@ -801,7 +801,7 @@ $(function() {
             $('.tool__info').addClass('card__allen__key');
             $('.drag').not($(this)).removeClass('drag__active');
             // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/allen-key.png)');  
-            $('.tool__info').removeClass('card__brush card__hammer card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
+            $('.tool__info').removeClass('card__brush card__teddy card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
           }
             if(this.hitTest(oil)) {
               $(this.target).fadeOut();
@@ -809,7 +809,7 @@ $(function() {
               console.log("your correct tool number is: " + correctToolNumber);
               $('.tool__number').text(correctToolNumber);
               $('.tool__info').addClass('card__oil');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__brush card__ratchet card__saw card__screw card__flask card__spanner card__tape');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__brush card__ratchet card__saw card__screw card__flask card__spanner card__tape');
               $('.drag').not($(this)).removeClass('drag__active');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/oil.png)'); 
             }
@@ -820,7 +820,7 @@ $(function() {
               $('.tool__number').text(correctToolNumber);
               $('.tool__info').addClass('card__flask');
               $('.drag').not($(this)).removeClass('drag__active');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__saw card__brush card__screw card__spanner card__tape');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__saw card__brush card__screw card__spanner card__tape');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/soup.png)'); 
             }
             if(this.hitTest(spanner)) {
@@ -830,7 +830,7 @@ $(function() {
               $('.tool__number').text(correctToolNumber);
               $('.tool__info').addClass('card__spanner');
               $('.drag').not($(this)).removeClass('drag__active');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__saw card__brush card__flask card__tape card__screw');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__saw card__brush card__flask card__tape card__screw');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/spanner.png)'); 
             }
             if(this.hitTest(screw)) {
@@ -840,7 +840,7 @@ $(function() {
               $('.tool__number').text(correctToolNumber);
               $('.tool__info').addClass('card__screw');
               $('.drag').not($(this)).removeClass('drag__active');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__saw card__brush card__flask card__spanner card__tape');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__saw card__brush card__flask card__spanner card__tape');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/screwdrivers.png)');
             }
 
@@ -865,7 +865,7 @@ $(function() {
               }, 750);
               $('.tool__info').addClass('card__brush');
               $('.tool__info').addClass('card__brush');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
               $('.drag').not($(this)).removeClass('drag__active');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/brush.png)'); 
 
@@ -889,7 +889,7 @@ $(function() {
               }, 750);
             $('.tool__info').addClass('card__tape');
             $('.drag').not($(this)).removeClass('drag__active');
-            $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__saw card__brush card__flask card__spanner card__screw');
+            $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__saw card__brush card__flask card__spanner card__screw');
             // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/tape.png)'); 
             } 
             if(this.hitTest(saw)) {
@@ -911,10 +911,10 @@ $(function() {
               }, 750);
               $('.tool__info').addClass('card__saw');
               $('.drag').not($(this)).removeClass('drag__active');
-              $('.tool__info').removeClass('card__allen__key card__hammer card__oil card__ratchet card__brush card__screw card__flask card__spanner card__tape');
+              $('.tool__info').removeClass('card__allen__key card__teddy card__oil card__ratchet card__brush card__screw card__flask card__spanner card__tape');
               // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/saw.png)'); 
             } 
-            if(this.hitTest(hammer)) {
+            if(this.hitTest(teddy)) {
 
               }
             } 
@@ -928,11 +928,11 @@ $(function() {
           });
         }
 
-          if ($(".hammer").hasClass("drag__active")) {
-            $('.tool__info').addClass('card__hammer');
+          if ($(".teddy").hasClass("drag__active")) {
+            $('.tool__info').addClass('card__teddy');
             $('.tool__info').removeClass('card__allen__key card__brush card__oil card__ratchet card__saw card__screw card__flask card__spanner card__tape');
             $('.drag').not($(this)).removeClass('drag__active');
-            // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/hammer.png)');  
+            // $('.tool__info').css('background', 'url(assets/06_choosing_tools/cards/1x/teddy.png)');  
           }
 
           if (correctToolNumber <= 0) {
@@ -940,7 +940,7 @@ $(function() {
             $('.mb03').removeClass('btn__lock').addClass('complete')
             $('.bm03').css('background', 'rgba(25, 25, 45, 0.8)').addClass('pe__none')
             $(".tool__number").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
-            // $(".hammer").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+            // $(".teddy").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
             // $(".tape").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
             // $(".brush").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
             // $(".saw").fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);

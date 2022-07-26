@@ -127,11 +127,13 @@
   #name .content {
     position: absolute;
     color: #fff;
-    top: 34%;
-    right: 7%;
+    top: 38%;
+    right: 11%;
     font-size: 36px;
-    max-width: 700px;
-    font-family: 'Gilroy-Light';
+    max-width: 580px;
+    font-family: 'Gilroy-Medium';
+    text-align: left;
+
   }
   
   .path.d.alpha.letter-A {
@@ -160,6 +162,11 @@
     border-radius: 830px;
     display: flex;
     justify-content: center;
+  }
+
+  .usr__char__selection {
+    font-family: 'Gilroy-Bold';
+    font-size: 48px;
   }
   
   .drag__active {
@@ -191,32 +198,49 @@
     height: 100px;
     width: 300px;
     position: absolute;
-    height: 150px;
-    width: 300px;
+    height: 114px;
+    width: 285px;
     position: absolute;
-    top: 78%;
-    right: 350px;
-  
+    top: 76.95%;
+    right: 364px;
+    border-radius: 96px;
+    transition: 0.2s;
+
   }
+
+  .btn__begin__not__active {
+    background: rgba(25, 25, 45, 0.6);
+    pointer-events: none;
+    transition: 0.2s;
+  }
+
+  .btn__name__back {
+    background: url(assets/02_name_wheel/btn_name_back.png);
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: 100px;
+    left: 97px;
+  }
+
   
   .dial {
     background: url(assets/02_name_wheel/dial.svg) no-repeat;
     background-size: cover;
-    height: 553px;
-    width: 542px;
-    top: 136px;
-    left: 139px;
+    height: 550px;
+    width: 550px;
+    top: 146px;
+    left: 143px;
     z-index: 999;
     position: absolute;
   }
   
   .dial2 {
     background: url(assets/02_name_wheel/dial.svg) no-repeat;
-    background-size: cover;
-    height: 592px;
-    width: 542px;
-    top: 107px;
-    left: 117px;
+    height: 545px;
+    width: 545px;
+    top: 143px;
+    left: 144px;
     z-index: 999;
     position: absolute;
     display: none;
@@ -258,25 +282,7 @@
     text-align: center;
     text-transform: uppercase;
   }
-  
-  /* .letter__container {
-      /* width: 0px;
-      height: 0px;
-      border-radius: 400px;
-      border: 400px solid aqua;
-      border-top-color: transparent;
-      -webkit-transform: rotate(225deg);
-      position: absolute;
-      top: 12px;
-      left: 12px;
-  
-      flex-grow: 1;
-      flex-basis: 0;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-     }  */
-  
+
   .item {
     overflow: hidden;
       position: absolute;
@@ -287,136 +293,33 @@
       -webkit-transform-origin: 0% 100%;
       transform-origin: 0% 100%;
   }
-  
-  /* li:first-child {
-    -webkit-transform: rotate(7deg) skewY(-77deg);
-    -ms-transform: rotate(7deg) skewY(-77deg);
-    transform: rotate(7deg) skewY(-77deg);    
-  }
-  li:nth-child(2) {
-    -webkit-transform: rotate(22deg) skewY(-79deg); 
-    -ms-transform: rotate(22deg) skewY(-79deg); 
-    transform: rotate(22deg) skewY(-79deg);   
-  }
-  li:nth-child(3) {
-    -webkit-transform: rotate(34deg) skewY(-74deg);
-    -ms-transform: rotate(34deg) skewY(-74deg);
-  transform: rotate(34deg) skewY(-74deg);    
-  }
-  li:nth-child(4) {
-    -webkit-transform: rotate(49deg) skewY(-74deg);
-    -ms-transform: rotate(49deg) skewY(-74deg);
-  transform: rotate(49deg) skewY(-74deg);    
-  }
-  li:nth-child(5) {
-    -webkit-transform: rotate(64deg) skewY(-74deg);
-    -ms-transform: rotate(64deg) skewY(-74deg);
-  transform: rotate(64deg) skewY(-74deg);    
-  }
-  li:nth-child(6) {
-    -webkit-transform: rotate(81deg) skewY(-74deg);
-    -ms-transform: rotate(81deg) skewY(-74deg);
-  transform: rotate(81deg) skewY(-74deg);    
-  }
-  li:nth-child(7) {
-    -webkit-transform: rotate(98deg) skewY(-74deg);
-    -ms-transform: rotate(98deg) skewY(-74deg);
-  transform: rotate(98deg) skewY(-74deg);    
-  }
-  li:nth-child(8) {
-    -webkit-transform: rotate(115deg) skewY(-74deg);
-    -ms-transform: rotate(115deg) skewY(-74deg);
-  transform: rotate(115deg) skewY(-74deg);    
-  }
-  li:nth-child(9) {
-    -webkit-transform: rotate(131deg) skewY(-74deg);
-    -ms-transform: rotate(131deg) skewY(-74deg);
-  transform: rotate(131deg) skewY(-74deg);    
-  }
-  li:nth-child(10) {
-    -webkit-transform: rotate(147deg) skewY(-74deg);
-    -ms-transform: rotate(147deg) skewY(-74deg);
-  transform: rotate(147deg) skewY(-74deg);    
-  }
-  li:nth-child(11) {
-    -webkit-transform: rotate(163deg) skewY(-74deg);
-    -ms-transform: rotate(163deg) skewY(-74deg);
-  transform: rotate(163deg) skewY(-74deg);    
-  }
-  li:nth-child(12) {
-    -webkit-transform: rotate(178deg) skewY(-74deg);
-    -ms-transform: rotate(178deg) skewY(-74deg);
-  transform: rotate(178deg) skewY(-74deg);    
-  }
-  li:nth-child(13) {
-    -webkit-transform: rotate(193deg) skewY(-74deg);
-    -ms-transform: rotate(193deg) skewY(-74deg);
-  transform: rotate(193deg) skewY(-74deg);     
-  }
-  li:nth-child(14) {
-    -webkit-transform: rotate(210deg) skewY(-77deg);
-    -ms-transform: rotate(210deg) skewY(-77deg);
-  transform: rotate(210deg) skewY(-77deg);     
-  }
-  li:nth-child(15) {
-    -webkit-transform: rotate(224deg) skewY(-78deg);
-    -ms-transform: rotate(224deg) skewY(-78deg);
-  transform: rotate(224deg) skewY(-78deg);    
-  }
-  li:nth-child(16) {
-    -webkit-transform: rotate(237deg) skewY(-74deg);
-    -ms-transform: rotate(237deg) skewY(-74deg);
-  transform: rotate(237deg) skewY(-74deg);    
-  }
-  li:nth-child(17) {
-    -webkit-transform: rotate(254deg) skewY(-78deg);
-    -ms-transform: rotate(254deg) skewY(-78deg);
-  transform: rotate(254deg) skewY(-78deg);    
-  }
-  li:nth-child(18) {
-    -webkit-transform: rotate(264deg) skewY(-74deg);
-    -ms-transform: rotate(264deg) skewY(-74deg);
-  transform: rotate(264deg) skewY(-74deg);    
-  }
-  li:nth-child(19) {
-    -webkit-transform: rotate(279deg) skewY(-74deg);
-    -ms-transform: rotate(279deg) skewY(-74deg);
-  transform: rotate(279deg) skewY(-74deg);   
-  }
-  li:nth-child(20) {
-    -webkit-transform: rotate(296deg) skewY(-74deg);
-    -ms-transform: rotate(296deg) skewY(-74deg);
-  transform: rotate(296deg) skewY(-74deg);    
-  }
-  li:nth-child(21) {
-    -webkit-transform: rotate(313deg) skewY(-78deg);
-    -ms-transform: rotate(313deg) skewY(-78deg);
-  transform: rotate(313deg) skewY(-78deg);    
-  }
-  li:nth-child(22) {
-    -webkit-transform: rotate(326deg) skewY(-78deg);
-    -ms-transform: rotate(326deg) skewY(-78deg);
-  transform: rotate(326deg) skewY(-78deg);    
-  }
-  li:nth-child(23) {
-    -webkit-transform: rotate(340deg) skewY(-77deg);
-    -ms-transform: rotate(340deg) skewY(-77deg);
-  transform: rotate(340deg) skewY(-77deg);    
-  }
-  li:nth-child(24) {   
-    transform: rotate(353deg) skewY(-77deg);
-    -webkit-transform: rotate(353deg) skewY(-77deg);
-    -ms-transform: rotate(353deg) skewY(-77deg);
-  } */
 
   .name__box {
     background: url(assets/06_choosing_tools/SVG/name_box.svg) no-repeat;
+    background-size: cover;
     width: 239px;
-    height: 200px;
+    height: 145px;
     position: absolute;
     top: 21px;
     left: 8px;
     z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .name__box.nb__alt {
+    background: none;
+    padding-left: 40px;
+    padding-top: 12px;
+  }
+
+  .name__box .nb__ucs {
+    display: inline;
+    font-family: 'Gilroy-Bold';
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
   }
   
   .btn__play {
@@ -498,6 +401,14 @@
     100% {
     transform: scale(1, 1);
     }
+  }
+
+  #info {
+    background: url(assets/01_intro/intro__bg.png) no-repeat;
+
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
   
   #locating__faults {
@@ -615,6 +526,14 @@
     transition: 0.4s;
     z-index: 1;
   }
+
+  .ci__gameply__info {
+    color: #fff;
+    font-size: 58px;
+    text-align: center;
+    margin-top: 170px;
+    transition: 0.2s;
+  }
   
   .card__allen__key {
     background: url(assets/06_choosing_tools/cards/1x/allen-key.png) no-repeat;
@@ -664,6 +583,16 @@
     display: none;
     pointer-events: none;
   }
+
+  .teddy {
+    background: url(assets/06_choosing_tools/tools/1x/teddy.png) no-repeat;
+    background-size: contain;
+    height: 241px;
+    width: 230px;
+    position: absolute;
+    top: 192px;
+    left: 554px;
+  }
   
   .hammer {
     background: url(assets/06_choosing_tools/1x/1x/hammer__time.png) no-repeat;
@@ -674,6 +603,7 @@
     bottom: 235px;
     right: 272px;
     z-index: 25;
+    display: none;
   }
   .ratchet {
     background: url(assets/06_choosing_tools/1x/ratchet.png) no-repeat;
@@ -692,7 +622,7 @@
     width: 230px;
     position: absolute;
     top: 192px;
-    left: 780px;
+    left: 1554px;
   }
   .brush {
     background: url(assets/06_choosing_tools/tools/1x/brush.png) no-repeat;
@@ -718,9 +648,10 @@
     height: 280px;
     width: 110px;
     position: absolute;
-    top: 292px;
-    left: 1525px;
+    top: 465px;
+    left: 1454px;
     z-index: 5000 !important;
+
   }
   .oil {
     background: url(assets/06_choosing_tools/tools/1x/hose.png) no-repeat;
@@ -728,7 +659,7 @@
     height: 380px;
     width: 280px;
     position: absolute;
-    top: 192px;
+    top: 450px;
     left: 1542px;
   }
 
@@ -738,8 +669,8 @@
     height: 120px;
     width: 385px;
     position: absolute;
-    top: 590px;
-    left: 1372px;
+    top: 715px;
+    left: 1175px;
   }
   .flask {
     background: url(assets/06_choosing_tools/tools/1x/flask.png) no-repeat;
@@ -1597,13 +1528,15 @@
 }
 
 .fc01 {
-  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard01.svg);
+  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard01.png);
+  background-size: contain;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
 .fc02 {
-  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard02.svg);
+  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard02.png);
+  background-size: contain;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -1724,4 +1657,8 @@
 
 #headoffshore .btn__home {
   z-index: 9999;
+}
+
+.op__on {
+  opacity: 0.4;
 }

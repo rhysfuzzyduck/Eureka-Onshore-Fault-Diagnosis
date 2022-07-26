@@ -16,6 +16,15 @@ $(function() {
         }, 1000);
       });
 
+      $('#info').click(function() {
+        $(this).fadeOut(750);
+        setTimeout(function() { 
+          $('#name').fadeIn();
+      }, 1000);
+      });
+
+
+
       $('.bm01').click(function() {
         $('.mb01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
         setTimeout(function() { 
@@ -41,7 +50,11 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#choosing__tools').fadeIn();
+            $('.ci__gameply__info').addClass('animate__animated animate__bounce')
         }, 2000);
+        setTimeout(function() { 
+            $('.ci__gameply__info').addClass('op__on');
+        }, 5500);
       });
       $('.bm04').click(function() {
         $('.mb04').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
@@ -76,6 +89,14 @@ $(function() {
       });
 
       
+      $('.btn__home').click(function() {
+        $('section').fadeOut(750);
+        setTimeout(function() { 
+          $('#menu').fadeIn();
+      }, 1000);
+      });
+
+      
       //Idle timeout
       $(function() {
         $(document).idleTimer(120000); //1 minute 60000
@@ -96,14 +117,21 @@ $(function() {
 
   // NAME MENU
 
-  gsap.registerPlugin(Draggable);
+  // GSAP draggable
+  // Each Dial controls letters & numbers which log out rotation of dial
+  // on it's end position. See console logs.
+  // Adds selected letter to username box.
 
+  gsap.registerPlugin(Draggable);
   
   let alphabet = ['start', 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   let numbers = ['1','2','3','4','5','6','7','8','9','0']
 
   var userCharButtonClicks = 0;
+  console.log(userCharButtonClicks);
 
+  var chars = "";
+  var numbs = "";
 
   Draggable.create(dial, {
     type:"rotation",
@@ -115,87 +143,116 @@ $(function() {
       return Math.round((value / 10) * 10)
     },
     onDrag: function() {
+      $(".btn__select").removeClass("op__on pe__none");
       var dial = document.querySelectorAll(".dial");
       var curRotation = gsap.getProperty("#dial", "rotation");
       // On dial rotation highlight letter 
       // + 7 to account for alphabet [start] array space
-      if (curRotation >= 7 && curRotation <= 17) {
+      // log 10deg rotation for each letter
+      //console.log(curRotation);
+      if (curRotation >= 7 && curRotation <= 15) {
+        chars = "a";
         $('path.d.alpha.letter-A').addClass('active');
         $('.alpha').not('path.d.alpha.letter-A').removeClass('active');
         //navHighlight();
-      } else if (curRotation >= 17 && curRotation <= 27) {
+      } else if (curRotation >= 15 && curRotation <= 25) {
+        chars = "b";
         $('path.d.alpha.letter-B').addClass('active');
         $('.alpha').not('path.d.alpha.letter-B').removeClass('active');
-      } else if (curRotation >= 27 && curRotation <= 37) {
+      } else if (curRotation >= 25 && curRotation <= 35) {
+        chars = "c";
         $('path.d.alpha.letter-C').addClass('active');
         $('.alpha').not('path.d.alpha.letter-C').removeClass('active');
-      } else if (curRotation >= 37 && curRotation <= 47) {
+      } else if (curRotation >= 35 && curRotation <= 45) {
+        chars = "d";
         $('path.d.alpha.letter-D').addClass('active');
         $('.alpha').not('path.d.alpha.letter-D').removeClass('active');
-      } else if (curRotation >= 47 && curRotation <= 57) {
+      } else if (curRotation >= 45 && curRotation <= 55) {
+        chars = "e";
         $('path.d.alpha.letter-E').addClass('active');
         $('.alpha').not('path.d.alpha.letter-E').removeClass('active');
-      } else if (curRotation >= 57 && curRotation <= 67) {
+      } else if (curRotation >= 55 && curRotation <= 65) {
+        chars = "f";
         $('path.d.alpha.letter-F').addClass('active');
         $('.alpha').not('path.d.alpha.letter-F').removeClass('active');
-      } else if (curRotation >= 67 && curRotation <= 77) {
+      } else if (curRotation >= 65 && curRotation <= 75) {
+        chars = "g";
         $('path.d.alpha.letter-G').addClass('active');
         $('.alpha').not('path.d.alpha.letter-G').removeClass('active');
-      } else if (curRotation >= 77 && curRotation <= 87) {
+      } else if (curRotation >= 75 && curRotation <= 85) {
+        chars = "h";
         $('path.d.alpha.letter-H').addClass('active');
         $('.alpha').not('path.d.alpha.letter-H').removeClass('active');
-      } else if (curRotation >= 87 && curRotation <= 97) {
+      } else if (curRotation >= 85 && curRotation <= 95) {
+        chars = "i";
         $('path.d.alpha.letter-I').addClass('active');
         $('.alpha').not('path.d.alpha.letter-I').removeClass('active');
-      } else if (curRotation >= 97 && curRotation <= 107) {
+      } else if (curRotation >= 95 && curRotation <= 105) {
+        chars = "j";
         $('path.d.alpha.letter-J').addClass('active');
         $('.alpha').not('path.d.alpha.letter-J').removeClass('active');
-      } else if (curRotation >= 107 && curRotation <= 117) {
+      } else if (curRotation >= 105 && curRotation <= 115) {
+        chars = "k";
         $('path.d.alpha.letter-K').addClass('active');
         $('.alpha').not('path.d.alpha.letter-K').removeClass('active');
-      } else if (curRotation >= 117 && curRotation <= 127) {
+      } else if (curRotation >= 115 && curRotation <= 125) {
+        chars = "l";
         $('path.d.alpha.letter-L').addClass('active');
         $('.alpha').not('path.d.alpha.letter-L').removeClass('active');
-      } else if (curRotation >= 127 && curRotation <= 137) {
+      } else if (curRotation >= 125 && curRotation <= 135) {
+        chars = "m";
         $('path.d.alpha.letter-M').addClass('active');
         $('.alpha').not('path.d.alpha.letter-M').removeClass('active');
-      } else if (curRotation >= 137 && curRotation <= 147) {
+      } else if (curRotation >= 135 && curRotation <= 145) {
+        chars = "n";
         $('path.d.alpha.letter-N').addClass('active');
         $('.alpha').not('path.d.alpha.letter-N').removeClass('active');
-      } else if (curRotation >= 147 && curRotation <= 154) {
+      } else if (curRotation >= 145 && curRotation <= 155) {
+        chars = "o";
         $('path.d.alpha.letter-O').addClass('active');
         $('.alpha').not('path.d.alpha.letter-O').removeClass('active');
-      } else if (curRotation >= 154 && curRotation <= 163) {
+      } else if (curRotation >= 155 && curRotation <= 165) {
+        chars = "p";
         $('path.d.alpha.letter-P').addClass('active');
         $('.alpha').not('path.d.alpha.letter-P').removeClass('active');
-      } else if (curRotation >= 163 && curRotation <= 173) {
+      } else if (curRotation >= 165 && curRotation <= 175) {
+        chars = "q";
         $('path.d.alpha.letter-Q').addClass('active');
         $('.alpha').not('path.d.alpha.letter-Q').removeClass('active');
-      } else if (curRotation >= 173 && curRotation <= 183) {
+      } else if (curRotation >= 175 && curRotation <= 185) {
+        chars = "r";
         $('path.d.alpha.letter-R').addClass('active');
         $('.alpha').not('path.d.alpha.letter-R').removeClass('active');
-      } else if (curRotation >= 183 && curRotation <= 193) {
+      } else if (curRotation >= 185 && curRotation <= 195) {
+        chars = "s";
         $('path.d.alpha.letter-S').addClass('active');
         $('.alpha').not('path.d.alpha.letter-S').removeClass('active');
-      } else if (curRotation >= 193 && curRotation <= 203) {
+      } else if (curRotation >= 195 && curRotation <= 205) {
+        chars = "t";
         $('path.d.alpha.letter-T').addClass('active');
         $('.alpha').not('path.d.alpha.letter-T').removeClass('active');
-      } else if (curRotation >= 203 && curRotation <= 213) {
+      } else if (curRotation >= 205 && curRotation <= 215) {
+        chars = "u";
         $('path.d.alpha.letter-U').addClass('active');
         $('.alpha').not('path.d.alpha.letter-U').removeClass('active');
-      } else if (curRotation >= 213 && curRotation <= 222) {
+      } else if (curRotation >= 215 && curRotation <= 225) {
+        chars = "v";
         $('path.d.alpha.letter-V').addClass('active');
         $('.alpha').not('path.d.alpha.letter-V').removeClass('active');
-      } else if (curRotation >= 222 && curRotation <= 232) {
+      } else if (curRotation >= 225 && curRotation <= 235) {
+        chars = "w";
         $('path.d.alpha.letter-W').addClass('active');
         $('.alpha').not('path.d.alpha.letter-W').removeClass('active');
-      } else if (curRotation >= 232 && curRotation <= 242) {
+      } else if (curRotation >= 235 && curRotation <= 245) {
+        chars = "x";
         $('path.d.alpha.letter-X').addClass('active');
         $('.alpha').not('path.d.alpha.letter-X').removeClass('active');
-      } else if (curRotation >= 242 && curRotation <= 253) {
+      } else if (curRotation >= 245 && curRotation <= 255) {
+        chars = "y";
         $('path.d.alpha.letter-Y').addClass('active');
         $('.alpha').not('path.d.alpha.letter-Y').removeClass('active');
-      } else if (curRotation >= 253 && curRotation <= 263) {
+      } else if (curRotation >= 255 && curRotation <= 265) {
+        chars = "z";
         $('path.d.alpha.letter-Z').addClass('active');
         $('.alpha').not('path.d.alpha.letter-Z').removeClass('active');
       }
@@ -204,33 +261,6 @@ $(function() {
     onDragEnd: function() {
       let end = Math.round(this.endRotation/10)
       console.log(alphabet[end], end);
-
-      var userCharButtonClicks = 0;
-      
-
-      function dooWOP() {
-        userCharButtonClicks++;
-        console.log(userCharButtonClicks)
-        nameProgress();
-        function nameProgress() {
-          if (userCharButtonClicks === 1) {
-            $('.ucs__01').html(alphabet[end])
-          } 
-          if (userCharButtonClicks === 2) {
-            $('.ucs__02').html(alphabet[end])
-          }
-          if (userCharButtonClicks === 3) {
-            $('.ucs__03').html(alphabet[end])
-          } 
-          if (userCharButtonClicks === 4) {
-            $('.ucs__04').html(numbers[end])
-          } 
-          if (userCharButtonClicks === 5) {
-            $('.ucs__05').html(numbers[end])
-            $('.btn__select').addClass('pe__none');
-          }
-        }
-      }
 
 
       function navHighlight() {
@@ -251,35 +281,9 @@ $(function() {
       //     event.target.classList.toggle('active');
       // }
 
-      //$('.btn__select').on( "click", dooWOP() );
+      
 
-      $('.btn__select').click(function() {
-        userCharButtonClicks++;
-        console.log(userCharButtonClicks)
-        nameProgress();
-        function nameProgress() {
-          if (userCharButtonClicks === 1) {
-            $('.ucs__01').html(alphabet[end])
-          } 
-          if (userCharButtonClicks === 2) {
-            $('.ucs__02').html(alphabet[end])
-          }
-          if (userCharButtonClicks === 3) {
-            $('.ucs__03').html(alphabet[end])
-            $('.letter__container').fadeOut();
-            $('.dial').fadeOut();
-            $('.number__container').fadeIn();
-            $('.dial2').fadeIn();
-          } 
-          if (userCharButtonClicks === 4) {
-            $('.ucs__04').html(numbers[end])
-          } 
-          if (userCharButtonClicks === 5) {
-            $('.ucs__05').html(numbers[end])
-            $('.btn__select').addClass('pe__none');
-          }
-        }
-      });
+
 
     }
   
@@ -297,37 +301,47 @@ $(function() {
     onDrag: function() {
       var dial2 = document.querySelectorAll(".dial2");
       var curRotation2 = gsap.getProperty("#dial2", "rotation");
-      console.log(curRotation2);
-
-      if (curRotation2 >= 1 && curRotation2 <= 6) {
+      //console.log(curRotation2);
+      // log 10deg rotation for each number
+      if (curRotation2 >= 0 && curRotation2 <= 10) {
+        numbs = "1";
         $('path.d.number.number__01').addClass('active');
         $('.number').not('path.d.number.number__01').removeClass('active');
         //navHighlight();
-      } else if (curRotation2 >= 6 && curRotation2 <= 15) {
+      } else if (curRotation2 >= 10 && curRotation2 <= 20) {
+        numbs = "2";
         $('path.d.number.number__02').addClass('active');
         $('.number').not('path.d.number.number__02').removeClass('active');
-      } else if (curRotation2 >= 15 && curRotation2 <= 26) {
+      } else if (curRotation2 >= 20 && curRotation2 <= 30) {
+        numbs = "3";
         $('path.d.number.number__03').addClass('active');
         $('.number').not('path.d.number.number__03').removeClass('active');
-      } else if (curRotation2 >= 26 && curRotation2 <= 36) {
+      } else if (curRotation2 >= 30 && curRotation2 <= 40) {
+        numbs = "4";
         $('path.d.number.number__04').addClass('active');
         $('.number').not('path.d.number.number__04').removeClass('active');
-      } else if (curRotation2 >= 36 && curRotation2 <= 47) {
+      } else if (curRotation2 >= 40 && curRotation2 <= 50) {
+        numbs = "5";
         $('path.d.number.number__05').addClass('active');
         $('.number').not('path.d.number.number__05').removeClass('active');
-      } else if (curRotation2 >= 47 && curRotation2 <= 58) {
+      } else if (curRotation2 >= 50 && curRotation2 <= 60) {
+        numbs = "6";
         $('path.d.number.number__06').addClass('active');
         $('.number').not('path.d.number.number__06').removeClass('active');
-      } else if (curRotation2 >= 58 && curRotation2 <= 69) {
+      } else if (curRotation2 >= 60 && curRotation2 <= 70) {
+        numbs = "7";
         $('path.d.number.number__07').addClass('active');
         $('.number').not('path.d.number.number__07').removeClass('active');
-      } else if (curRotation2 >= 69 && curRotation2 <= 79) {
+      } else if (curRotation2 >= 70 && curRotation2 <= 80) {
+        numbs = "8";
         $('path.d.number.number__08').addClass('active');
         $('.number').not('path.d.number.number__08').removeClass('active');
-      } else if (curRotation2 >= 79 && curRotation2 <= 90) {
+      } else if (curRotation2 >= 80 && curRotation2 <= 90) {
+        numbs = "9";
         $('path.d.number.number__09').addClass('active');
         $('.number').not('path.d.number.number__09').removeClass('active');
       } else if (curRotation2 >= 90 && curRotation2 <= 100) {
+        numbs = "0";
         $('path.d.number.number__00').addClass('active');
         $('.number').not('path.d.number.number__00').removeClass('active');
       }
@@ -338,8 +352,72 @@ $(function() {
     }
   });
 
+  //AL FIX
+  $('.btn__select').click(function() {
+    userCharButtonClicks++;
+    nameProgress();
+  });
+
+  $('.btn__name__back').click(function() {
+    $('.btn__begin').addClass('btn__begin__not__active');
+    console.log(userCharButtonClicks);
+    if (userCharButtonClicks === 1) {
+      userCharButtonClicks = 0;
+      $('.ucs__01').html("&nbsp;")
+      // $(this).addClass('pe__none');
+    } 
+    if (userCharButtonClicks === 2) {
+      userCharButtonClicks--;
+      $('.ucs__02').html("&nbsp;")
+    }
+    if (userCharButtonClicks === 3) {
+      userCharButtonClicks--;
+      $('.ucs__03').html("&nbsp;")
+      $('.number__container').fadeOut();
+      $('.dial2').fadeOut();
+      $('.letter__container').fadeIn();
+      $('.dial').fadeIn();
+    } 
+    if (userCharButtonClicks === 4) {
+      userCharButtonClicks--;
+      $('.ucs__04').html("&nbsp;")
+    } 
+    if (userCharButtonClicks === 5) {
+      userCharButtonClicks--;
+      $('.btn__select').removeClass('pe__none');
+      $('.ucs__05').html("&nbsp;")
+    }
+    //nameProgress();
+  });
+
+  function nameProgress() {
+    console.log(userCharButtonClicks);
+    if (userCharButtonClicks === 1) {
+      $('.ucs__01').html(chars)
+    } 
+    if (userCharButtonClicks === 2) {
+      $('.ucs__02').html(chars)
+    }
+    if (userCharButtonClicks === 3) {
+      $('.ucs__03').html(chars)
+      $('.letter__container').fadeOut();
+      $('.dial').fadeOut();
+      $('.number__container').fadeIn();
+      $('.dial2').fadeIn();
+    } 
+    if (userCharButtonClicks === 4) {
+      $('.ucs__04').html(numbs)
+    } 
+    if (userCharButtonClicks === 5) {
+      $('.ucs__05').html(numbs)
+      $('.btn__select').addClass('pe__none');
+      $('.btn__begin').removeClass('btn__begin__not__active');
+    }
+  }
+
   $('.btn__begin').click(function() {  
     $('#name').fadeOut(750);
+    console.clear();
     setTimeout(function() { 
         $('#menu').fadeIn();
     }, 1000);
@@ -354,7 +432,6 @@ $(function() {
   $('.map').draggable({
       containment: [-700, -822, 0, 0], scroll: false,
       //containment: [-1500, -1622, 0, 0], scroll: false,
-      //containment: [0, 0, 0, 0], scroll: false,
       drag: function(event, ui) {
           var position = ui.position;
       }
@@ -657,6 +734,7 @@ $(function() {
 
         onDrop(this.target);
         if (this.hitTest(dropArea, overlapThreshold)) {
+          $('.ci__gameply__info').hide();
           if (this.hitTest(hammer)) {
             var overlapThreshold = "50%";
             //$(this.target).fadeIn();
@@ -1225,14 +1303,14 @@ $(function() {
       $('.fc01').addClass("animate__animated animate__flipOutY");
       setTimeout(function() { 
         $('.fc01').removeClass("animate__flipOutY").addClass("animate__flipInY");
-        $('.fc01').css('background', 'url("assets/05_diagnosing_faults/SVG/fault01_foundcard.svg")');
+        $('.fc01').css('background', 'url("assets/05_diagnosing_faults/SVG/fault01_foundcard.png")');
         $('.fc01').addClass('pe__none');
         //$('.btn__repair__hl01').addClass('pe__none');
         faultO2E821 = true;
         faultO4D367 = false;
         setTimeout(function() { 
           $('.fc01').removeClass('fault__card__border');
-          $('.fc02').removeClass('fc__opacity').addClass('fault__card__border');
+          $('.fc02').removeClass('fc__opacity');
           faultO2E821 = true;
           faultO4D367 = false;
       }, 1000); 
@@ -1242,20 +1320,20 @@ $(function() {
       $('.fc02').addClass("animate__animated animate__flipOutY");
       setTimeout(function() { 
         $('.fc02').removeClass("animate__flipOutY").addClass("animate__flipInY");
-        $('.fc02').css('background', 'url("assets/05_diagnosing_faults/SVG/fault02_foundcard.svg")');
+        $('.fc02').css('background', 'url("assets/05_diagnosing_faults/SVG/fault02_foundcard.png")');
         $('.fc02').addClass('pe__none');
         $('.btn__repair__hl01').addClass('pe__none');
 
         setTimeout(function() { 
-          $('.fc02').removeClass('fault__card__border');
+          // $('.fc02').removeClass('fault__card__border');
           $('.fc01 .fc02').removeClass('fc__opacity');
       }, 1000); 
     }, 500); 
     } 
 
     function completeDFMessage() {
-      $('.fc01').removeClass('fc__opacity fault__card__border');
-      $('.fc02').removeClass('fc__opacity fault__card__border');
+      // $('.fc01').removeClass('fc__opacity fault__card__border');
+      // $('.fc02').removeClass('fc__opacity fault__card__border');
       $('.mb02').removeClass('btn__play').addClass('complete')
       $('.bm02').css('background', 'rgba(25, 25, 45, 0.8)').addClass('pe__none')
       $('.mb03').removeClass('btn__lock').addClass('btn__play');
@@ -1278,6 +1356,13 @@ $(function() {
       }, 1000); 
   }, 6000); 
     }
+
+    $('.btn__repair').click(function() {
+      $('.btn__repair').addClass('pe__none');
+      setTimeout(function() { 
+        $('.btn__repair').removeClass('pe__none');
+    }, 3000); 
+    });
 
     $('.fc01').click(function() { 
       $(this).addClass('fault__card__border').removeClass('fc__opacity');
