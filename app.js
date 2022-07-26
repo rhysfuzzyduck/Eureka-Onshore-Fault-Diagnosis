@@ -417,6 +417,7 @@ $(function() {
 
   $('.btn__begin').click(function() {  
     $('#name').fadeOut(750);
+    console.clear();
     setTimeout(function() { 
         $('#menu').fadeIn();
     }, 1000);
@@ -1302,14 +1303,14 @@ $(function() {
       $('.fc01').addClass("animate__animated animate__flipOutY");
       setTimeout(function() { 
         $('.fc01').removeClass("animate__flipOutY").addClass("animate__flipInY");
-        $('.fc01').css('background', 'url("assets/05_diagnosing_faults/SVG/fault01_foundcard.svg")');
+        $('.fc01').css('background', 'url("assets/05_diagnosing_faults/SVG/fault01_foundcard.png")');
         $('.fc01').addClass('pe__none');
         //$('.btn__repair__hl01').addClass('pe__none');
         faultO2E821 = true;
         faultO4D367 = false;
         setTimeout(function() { 
           $('.fc01').removeClass('fault__card__border');
-          $('.fc02').removeClass('fc__opacity').addClass('fault__card__border');
+          $('.fc02').removeClass('fc__opacity');
           faultO2E821 = true;
           faultO4D367 = false;
       }, 1000); 
@@ -1319,20 +1320,20 @@ $(function() {
       $('.fc02').addClass("animate__animated animate__flipOutY");
       setTimeout(function() { 
         $('.fc02').removeClass("animate__flipOutY").addClass("animate__flipInY");
-        $('.fc02').css('background', 'url("assets/05_diagnosing_faults/SVG/fault02_foundcard.svg")');
+        $('.fc02').css('background', 'url("assets/05_diagnosing_faults/SVG/fault02_foundcard.png")');
         $('.fc02').addClass('pe__none');
         $('.btn__repair__hl01').addClass('pe__none');
 
         setTimeout(function() { 
-          $('.fc02').removeClass('fault__card__border');
+          // $('.fc02').removeClass('fault__card__border');
           $('.fc01 .fc02').removeClass('fc__opacity');
       }, 1000); 
     }, 500); 
     } 
 
     function completeDFMessage() {
-      $('.fc01').removeClass('fc__opacity fault__card__border');
-      $('.fc02').removeClass('fc__opacity fault__card__border');
+      // $('.fc01').removeClass('fc__opacity fault__card__border');
+      // $('.fc02').removeClass('fc__opacity fault__card__border');
       $('.mb02').removeClass('btn__play').addClass('complete')
       $('.bm02').css('background', 'rgba(25, 25, 45, 0.8)').addClass('pe__none')
       $('.mb03').removeClass('btn__lock').addClass('btn__play');
@@ -1355,6 +1356,13 @@ $(function() {
       }, 1000); 
   }, 6000); 
     }
+
+    $('.btn__repair').click(function() {
+      $('.btn__repair').addClass('pe__none');
+      setTimeout(function() { 
+        $('.btn__repair').removeClass('pe__none');
+    }, 3000); 
+    });
 
     $('.fc01').click(function() { 
       $(this).addClass('fault__card__border').removeClass('fc__opacity');

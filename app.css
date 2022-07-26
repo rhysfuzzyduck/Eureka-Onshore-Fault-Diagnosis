@@ -593,6 +593,7 @@
     bottom: 235px;
     right: 272px;
     z-index: 25;
+    display: none;
   }
   .ratchet {
     background: url(assets/06_choosing_tools/1x/ratchet.png) no-repeat;
@@ -611,7 +612,7 @@
     width: 230px;
     position: absolute;
     top: 192px;
-    left: 780px;
+    left: 1554px;
   }
   .brush {
     background: url(assets/06_choosing_tools/tools/1x/brush.png) no-repeat;
@@ -637,9 +638,10 @@
     height: 280px;
     width: 110px;
     position: absolute;
-    top: 292px;
-    left: 1525px;
+    top: 465px;
+    left: 1454px;
     z-index: 5000 !important;
+
   }
   .oil {
     background: url(assets/06_choosing_tools/tools/1x/hose.png) no-repeat;
@@ -647,7 +649,7 @@
     height: 380px;
     width: 280px;
     position: absolute;
-    top: 192px;
+    top: 450px;
     left: 1542px;
   }
 
@@ -657,8 +659,8 @@
     height: 120px;
     width: 385px;
     position: absolute;
-    top: 590px;
-    left: 1372px;
+    top: 715px;
+    left: 1175px;
   }
   .flask {
     background: url(assets/06_choosing_tools/tools/1x/flask.png) no-repeat;
@@ -1516,13 +1518,15 @@
 }
 
 .fc01 {
-  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard01.svg);
+  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard01.png);
+  background-size: contain;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
 .fc02 {
-  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard02.svg);
+  background: url(assets/05_diagnosing_faults/SVG/SVG/faultcard02.png);
+  background-size: contain;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
