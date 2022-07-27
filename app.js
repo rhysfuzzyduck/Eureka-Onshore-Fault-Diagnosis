@@ -151,6 +151,32 @@ $(function() {
           });
         }
 
+        if ($('#choosing__tools').is(':visible')) {
+          $('#choosing__tools').removeClass('pe__none');
+          $('.modal__congrats').click(function() {
+              console.clear();
+              $('#choosing__tools').fadeOut(750);
+
+              setTimeout(function() { 
+                $('#menu').fadeIn(750);
+                slideDownModal();
+              }, 1000);
+          });
+        }
+
+        if ($('#buddyeq__check').is(':visible')) {
+          $('#buddyeq__check').removeClass('pe__none');
+          $('.modal__congrats').click(function() {
+              console.clear();
+              $('#buddyeq__check').fadeOut(750);
+
+              setTimeout(function() { 
+                $('#menu').fadeIn(750);
+                slideDownModal();
+              }, 1000);
+          });
+        }
+
       } // ./ hideAndShowGameplayModal()
       
       //Idle timeout
@@ -1176,16 +1202,7 @@ $(function() {
         $('.mb06').removeClass('btn__lock').addClass('btn__play');
         $('.bm06').removeClass('pe__none');
         // $('.highlight').addClass('pulse');
-        setTimeout(function() { 
-          $('.mo__budeq').fadeIn();
-        }, 2000); 
-        setTimeout(function() { 
-          $('#buddyeq__check').fadeOut();
-          console.clear()
-          setTimeout(function() { 
-            $('#menu').fadeIn();
-          }, 1000); 
-      }, 6000); 
+        hideAndShowGameplayModal()
       }
     }
 

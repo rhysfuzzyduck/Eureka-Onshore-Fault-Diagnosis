@@ -1146,7 +1146,7 @@
   }
   
   #buddyeq__check {
-    background: url(assets/08_buddyeq/budeq__bg.svg);
+    background: url(assets/08_buddyeq/budeq__bg.png);
     position: relative;
   }
   #buddyeq__check .kitlist {
@@ -1218,50 +1218,6 @@
     height: 100px;
     width: 40px;
     background: url(assets/08_buddyeq/1x/Asset10.png) no-repeat;
-  }
-  
-  #buddyeq__check .modal__overlay {
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
-  
-  #buddyeq__check .modal__overlay .modal__inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #buddyeq__check .modal__overlay .modal {
-    background: url(assets/06_choosing_tools/SVG/SVG/model.svg) no-repeat;
-    color: #fff;
-      text-align: center;
-      width: 1000px;
-      height: 668px;
-  }
-  
-  #buddyeq__check .modal__overlay .modal .modal__title {
-    font-size: 72px;
-    margin: 12% auto;
-    width: 460px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Gilroy-Bold';
-  }
-  
-  #buddyeq__check .modal__overlay .modal .modal__content {
-    font-size: 42px;
-    font-family: 'Gilroy-Bold';
   }
 
   .bb__card {
