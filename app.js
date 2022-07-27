@@ -29,7 +29,7 @@ $(function() {
         $('.mb01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
         setTimeout(function() { 
           $('#menu').fadeOut(750);
-      }, 1250);
+        }, 1250);
         setTimeout(function() { 
             $('#locating__faults').fadeIn();
         }, 2000);
@@ -50,7 +50,7 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#choosing__tools').fadeIn();
-            $('.ci__gameply__info').addClass('animate__animated animate__bounce')
+            $('.ci__gameply__info').addClass('animate__bounce')
         }, 2000);
         setTimeout(function() { 
             $('.ci__gameply__info').addClass('op__on');
@@ -96,6 +96,62 @@ $(function() {
       }, 1000);
       });
 
+
+      // Modals
+      $('.modal__overlay').click(function() {
+        $('.modal__overlay__inner').addClass('animate__animated animate__slideOutUp');
+      });
+
+      function hideAndShowGameplayModal() {
+        $('.modal__gameplay').hide();
+        $('.modal__congrats').show();
+        $('.modal__overlay__inner').removeClass("animate__slideOutUp").addClass('animate__slideInDown');
+
+        function slideDownModal() {
+          $('.modal__overlay__inner').removeClass("animate__slideOutUp");
+          $('.modal__gameplay').show();
+          $('.modal__congrats').hide();
+        }
+
+        if($('#locating__faults').is(':visible')) {
+          $('#locating__faults').removeClass('pe__none');
+          $('.modal__congrats').click(function() {
+              console.clear();
+              $('#locating__faults').fadeOut(750);
+              
+              setTimeout(function() { 
+                $('#menu').fadeIn(750)
+                slideDownModal();
+              }, 1000);
+          }); 
+        }
+        
+        if($('#diagnosing__faults').is(':visible')) {
+          $('.modal__congrats').click(function() {
+              console.clear();
+              $('#diagnosing__faults').fadeOut(750);
+              
+              setTimeout(function() { 
+                $('#menu').fadeIn(750)
+                slideDownModal();
+              }, 1000);
+          }); 
+        }
+
+        if ($('#choosing__tools').is(':visible')) {
+          $('#choosing__tools').removeClass('pe__none');
+          $('.modal__congrats').click(function() {
+              console.clear();
+              $('#choosing__tools').fadeOut(750);
+
+              setTimeout(function() { 
+                $('#menu').fadeIn(750);
+                slideDownModal();
+              }, 1000);
+          });
+        }
+
+      } // ./ hideAndShowGameplayModal()
       
       //Idle timeout
       $(function() {
@@ -301,6 +357,7 @@ $(function() {
     onDrag: function() {
       var dial2 = document.querySelectorAll(".dial2");
       var curRotation2 = gsap.getProperty("#dial2", "rotation");
+      $('.btn__select').removeClass('op__on pe__none');
       //console.log(curRotation2);
       // log 10deg rotation for each number
       if (curRotation2 >= 0 && curRotation2 <= 10) {
@@ -404,6 +461,8 @@ $(function() {
       $('.dial').fadeOut();
       $('.number__container').fadeIn();
       $('.dial2').fadeIn();
+      console.log('foo')
+      $('.btn__select').addClass('op__on pe__none');
     } 
     if (userCharButtonClicks === 4) {
       $('.ucs__04').html(numbs)
@@ -564,15 +623,8 @@ $(function() {
       $('.mb02').removeClass('btn__lock').addClass('btn__play');
       $('.bm02').removeClass('pe__none');
         setTimeout(function() { 
-          $('.lf__modal__overlay').fadeIn();
-      }, 3000); 
-      setTimeout(function() { 
-        console.clear();
-        $('#locating__faults').fadeOut();
-        setTimeout(function() { 
-          $('#menu').fadeIn();
+            hideAndShowGameplayModal()
         }, 2000); 
-    }, 6000); 
     }
   });
   $('.tbr__bb12').click(function() {  
@@ -596,15 +648,8 @@ $(function() {
       $('.mb02').removeClass('btn__lock').addClass('btn__play');
       $('.bm02').removeClass('pe__none');
         setTimeout(function() { 
-          $('.lf__modal__overlay').fadeIn();
-      }, 3000); 
-      setTimeout(function() { 
-        console.clear();
-        $('#locating__faults').fadeOut();
-        setTimeout(function() { 
-          $('#menu').fadeIn();
-        }, 2000); 
-    }, 6000); 
+          hideAndShowGameplayModal()
+      }, 2000); 
     }
   });
 
@@ -948,16 +993,8 @@ $(function() {
             $('.mb04').removeClass('btn__lock').addClass('btn__play');
             $('.bm04').removeClass('pe__none');
             setTimeout(function() { 
-              $('.modal__overlay').fadeIn();
-            }, 2500);
-            setTimeout(function() { 
-              $('#choosing__tools').fadeOut(750);
-              $('.modal__overlay').fadeOut(750);
-              console.clear();
-            }, 5500);
-            setTimeout(function() { 
-                $('#menu').fadeIn()
-            }, 6500);
+              hideAndShowGameplayModal();
+          }, 2000);
           }
       }
     
@@ -1334,29 +1371,19 @@ $(function() {
     } 
 
     function completeDFMessage() {
-      // $('.fc01').removeClass('fc__opacity fault__card__border');
-      // $('.fc02').removeClass('fc__opacity fault__card__border');
       $('.mb02').removeClass('btn__play').addClass('complete')
       $('.bm02').css('background', 'rgba(25, 25, 45, 0.8)').addClass('pe__none')
       $('.mb03').removeClass('btn__lock').addClass('btn__play');
       $('.bm03').removeClass('pe__none');
-      setTimeout(function() { 
-        $('.fc01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
-        $('.fc02').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
-    }, 1500); 
-      setTimeout(function() { 
-        $('.hotspot').fadeOut();
-        $('.hotspot__card').fadeOut();
-        $('.df__modal__overlay').fadeIn(500);
-    }, 3000); 
-    setTimeout(function() { 
-      console.clear();
-      $('#diagnosing__faults').fadeOut();
-
-      setTimeout(function() { 
-        $('#menu').fadeIn();
-      }, 1000); 
-  }, 6000); 
+        setTimeout(function() { 
+          $('.fc01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+          $('.fc02').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+        }, 1500); 
+        setTimeout(function() { 
+            $('.hotspot').fadeOut();
+            $('.hotspot__card').fadeOut();
+            hideAndShowGameplayModal();
+        }, 3000); 
     }
 
     $('.btn__repair').click(function() {

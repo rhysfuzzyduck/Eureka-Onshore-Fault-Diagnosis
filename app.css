@@ -110,6 +110,30 @@
     left: 1%;
     z-index: 50;
   }
+
+  .modal__overlay .modal__overlay__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal__gameplay {
+    width: 856px;
+    height: 630px;
+  }
+  
+  .modal__congrats {
+    display: none;
+    width: 650px;
+    height: 500px;
+  }
   
   /* Section Styles */
   
@@ -805,50 +829,6 @@
     z-index: 100;
 }
   
-  #choosing__tools .modal__overlay {
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1500;
-  }
-  
-  #choosing__tools .modal__overlay .modal__inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999999;
-  }
-  
-  #choosing__tools .modal__overlay .modal {
-    background: url(assets/06_choosing_tools/SVG/SVG/model.svg) no-repeat;
-    color: #fff;
-      text-align: center;
-      width: 1000px;
-      height: 668px;
-  }
-  
-  #choosing__tools .modal__overlay .modal .modal__title {
-    font-size: 72px;
-    margin: 12% auto;
-    width: 460px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Gilroy-Bold';
-  }
-  
-  #choosing__tools .modal__overlay .modal .modal__content {
-    font-size: 42px;
-    font-family: 'Gilroy-Bold';
-  }
   
   .drop__zone {
     background: url(assets/06_choosing_tools/drop-zone.png) no-repeat;
@@ -1625,85 +1605,7 @@
   opacity: 0.4;
 }
 
-.df__modal__overlay {
-  display: none;
-}
 
-.df__modal__overlay .modal__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.df__modal__overlay .modal {
-  background: url(assets/06_choosing_tools/SVG/SVG/model.svg) no-repeat;
-  color: #fff;
-    text-align: center;
-    width: 1000px;
-    height: 668px;
-}
-
-.df__modal__overlay .modal .modal__title {
-  font-size: 72px;
-  margin: 12% auto;
-  width: 460px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Gilroy-Bold';
-}
-
-.df__modal__overlay .modal .modal__content {
-  font-size: 42px;
-  font-family: 'Gilroy-Bold';
-  padding: 0px 12%;
-}
-
-.lf__modal__overlay {
-  display: none;
-}
-
-.lf__modal__overlay .modal__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.lf__modal__overlay .modal {
-  background: url(assets/06_choosing_tools/SVG/SVG/model.svg) no-repeat;
-  color: #fff;
-    text-align: center;
-    width: 1000px;
-    height: 668px;
-}
-
-.lf__modal__overlay .modal .modal__title {
-  font-size: 72px;
-  margin: 12% auto;
-  width: 460px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Gilroy-Bold';
-}
-
-.lf__modal__overlay .modal .modal__content {
-  font-size: 42px;
-  font-family: 'Gilroy-Bold';
-  padding: 0px 12%;
-}
 
 /* Head Offshore */
 
