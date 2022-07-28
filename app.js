@@ -515,7 +515,8 @@ $(function() {
   var correctTurbineCounter = 0;
 
   $('.map').draggable({
-      containment: [-700, -822, 0, 0], scroll: false,
+    containment: [-2500, -2500, 0, 0], scroll: false,
+      // containment: [-700, -822, 0, 0], scroll: false,
       //containment: [-1500, -1622, 0, 0], scroll: false,
       drag: function(event, ui) {
           var position = ui.position;
@@ -1320,6 +1321,7 @@ $(function() {
     $('.hotspot01').click(function() { 
       $('.hc01').fadeIn();
       $('.hc01').addClass('animate__animated animate__fadeInUp');
+      $('.hotspot__card').not('.hc01').fadeOut();
       $('.hl01').fadeIn(1500);
     });
     $('.btn__close__hl01').click(function() { 
@@ -1330,6 +1332,7 @@ $(function() {
     $('.hotspot02').click(function() { 
       $('.hc02').fadeIn();
       $('.hc02').addClass('animate__animated animate__fadeInUp');
+      $('.hotspot__card').not('.hc02').fadeOut();
       $('.hl02').fadeIn(1500);
     });
     $('.btn__close__hl02').click(function() { 
@@ -1339,6 +1342,7 @@ $(function() {
     $('.hotspot03').click(function() { 
       $('.hc03').fadeIn();
       $('.hc03').addClass('animate__animated animate__fadeInUp');
+      $('.hotspot__card').not('.hc03').fadeOut();
       $('.hl03').fadeIn(2000);
     });
     $('.btn__close__hl03').click(function() { 
@@ -1348,6 +1352,7 @@ $(function() {
     $('.hotspot04').click(function() { 
       $('.hc04').fadeIn();
       $('.hc04').addClass('animate__animated animate__fadeInUp');
+      $('.hotspot__card').not('.hc04').fadeOut();
       $('.hl04').fadeIn(2000);
     });
     $('.btn__close__hl04').click(function() { 

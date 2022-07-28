@@ -466,7 +466,8 @@
   }
 
   .map {
-    width: 2000px;
+    /* width: 2000px; */
+    width: 4000px;
     /* margin-top: 100px; */
 }
   
@@ -1221,8 +1222,8 @@
   }
 
   .bb__card {
-    height: 250px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
     position: absolute;
     display: none;
     cursor: pointer;
@@ -1277,14 +1278,14 @@
     background: url(assets/04_locating_faults/faults/SVG/bb5.svg) no-repeat;
     background-size: contain;
     top: 332px;
-    left: 102px;
+    left: 512px;
     display: none;
   }
   .bb5__repaired {
     background: url(assets/04_locating_faults/faults/SVG/bb5_repaired.svg) no-repeat;
     background-size: contain;
     top: 332px;
-    left: 102px;
+    left: 512px;
   }
   .bb6 {
     background: url(assets/04_locating_faults/faults/SVG/bb6.svg) no-repeat;
@@ -1332,14 +1333,14 @@
   .bb12 {
     background: url(assets/04_locating_faults/faults/SVG/bb12.svg) no-repeat;
     background-size: contain;
-    top: 889px;
-    left: 1251px;
+    top: 1689px;
+    left: 2551px;
   }
   .bb12__repaired {
     background: url(assets/04_locating_faults/faults/SVG/bb12_repaired.svg) no-repeat;
     background-size: contain;
-    top: 889px;
-    left: 1251px;
+    top: 1689px;
+    left: 2551px;
     display: none;
   }
   .bb13 {
@@ -1586,6 +1587,10 @@
 
 #headoffshore .btn__home {
   z-index: 9999;
+}
+
+#headoffshore .name__box .nb__ucs {
+  color: #000;
 }
 
 .op__on {
