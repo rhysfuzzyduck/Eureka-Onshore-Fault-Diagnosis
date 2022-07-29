@@ -125,8 +125,9 @@
   }
   
   .modal__gameplay {
-    width: 856px;
+    width: 1015px;
     height: 630px;
+    margin-top: 20px;
   }
   
   .modal__congrats {
@@ -215,7 +216,7 @@
     position: absolute;
     z-index: 999999;
     top: 44%;
-    left: 287px;
+    left: 295px;
   }
   
   .btn__begin {
@@ -1252,26 +1253,26 @@
   .bb1 {
     background: url(assets/04_locating_faults/faults/SVG/bb1.svg) no-repeat;
     background-size: contain;
-    top: 259px;
-    left: 560px;
+    top: 456px;
+    left: 1185px;
   }
   .bb2 {
     background: url(assets/04_locating_faults/faults/SVG/bb2.svg) no-repeat;
     background-size: contain;
-    top: 538px;
-    left: 219px;
+    top: 1030px;
+    left: 466px;
   }
   .bb3 {
     background: url(assets/04_locating_faults/faults/SVG/bb3.svg) no-repeat;
     background-size: contain;
-    top: 1122px;
-    left: 875px;
+    top: 2222px;
+    left: 1841px;
   }
   .bb4 {
     background: url(assets/04_locating_faults/faults/SVG/bb4.svg) no-repeat;
     background-size: contain;
-    top: 996px;
-    left: 93px;
+    top: 1696px;
+    left: 550px;
   }
 
   .bb5 {
@@ -1290,45 +1291,46 @@
   .bb6 {
     background: url(assets/04_locating_faults/faults/SVG/bb6.svg) no-repeat;
     background-size: contain;
-    top: 1609px;
-    left: 93px;
+    top: 3009px;
+    left: 610px;
   }
   .bb7 {
     background: url(assets/04_locating_faults/faults/SVG/bb7.svg) no-repeat;
     background-size: contain;
-    top: 1205px;
-    left: 266px;
+    top: 2505px;
+    left: 646px;
   }
   .bb8 {
     background: url(assets/04_locating_faults/faults/SVG/bb8.svg) no-repeat;
     background-size: contain;
-    top: 850px;
-    left: 590px;
+    top: 1650px;
+    left: 1289px;
   }
   .bb9 {
     background: url(assets/04_locating_faults/faults/SVG/bb9.svg) no-repeat;
     background-size: contain;
-    top: 1528px;
-    left: 460px;
+    top: 3026px;
+    left: 1045px;
   }
   .bb10 {
     background: url(assets/04_locating_faults/faults/SVG/bb10.svg) no-repeat;
     background-size: contain;
-    top: 1460px;
-    left: 1372px;
+    top: 2860px;
+    left: 2820px;
   }
   .bb10__reboot {
     background: url(assets/04_locating_faults/faults/SVG/bb10_1.svg) no-repeat;
     background-size: contain;
-    top: 1460px;
-    left: 1372px;
+    top: 2860px;
+    left: 2820px;
     display: none;
   }
   .bb11 {
     background: url(assets/04_locating_faults/faults/SVG/bb11.svg) no-repeat;
     background-size: contain;
-    top: 564px;
-    left: 875px;
+    top: 1150px;
+    left: 1845px;
+
   }
   .bb12 {
     background: url(assets/04_locating_faults/faults/SVG/bb12.svg) no-repeat;
@@ -1346,26 +1348,26 @@
   .bb13 {
     background: url(assets/04_locating_faults/faults/SVG/bb13.svg) no-repeat;
     background-size: contain;
-    top: 1595px;
-    left: 965px;
+    top: 3195px;
+    left: 2078px;
   }
   .bb14 {
     background: url(assets/04_locating_faults/faults/SVG/bb14.svg) no-repeat;
     background-size: contain;
-    top: 525px;
-    left: 1449px;
+    top: 1025px;
+    left: 2970px;
   }
   .bb15 {
     background: url(assets/04_locating_faults/faults/SVG/bb15.png) no-repeat;
     background-size: contain;
-    top: 250px;
-    left: 1184px;
+    top: 422px;
+    left: 2441px
   }
   .bb16 {
     background: url(assets/04_locating_faults/faults/SVG/bb16.svg) no-repeat;
     background-size: contain;
-    top: 1150px;
-    left: 1566px;
+    top: 2264px;
+    left: 3226px;
   }
 
   .green__fill {

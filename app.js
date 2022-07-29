@@ -32,6 +32,7 @@ $(function() {
         }, 1250);
         setTimeout(function() { 
             $('#locating__faults').fadeIn();
+            $('.modal__overlay__inner').fadeIn();
         }, 2000);
       });
       $('.bm02').click(function() {
@@ -41,6 +42,7 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#diagnosing__faults').fadeIn();
+            $('.modal__overlay__inner').fadeIn();
         }, 2000);
       });
       $('.bm03').click(function() {
@@ -50,7 +52,8 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#choosing__tools').fadeIn();
-            $('.ci__gameply__info').addClass('animate__bounce')
+            $('.ci__gameply__info').addClass('animate__bounce');
+            $('.modal__overlay__inner').fadeIn();
         }, 2000);
         setTimeout(function() { 
             $('.ci__gameply__info').addClass('op__on');
@@ -64,6 +67,7 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#weather').fadeIn();
+            $('.modal__overlay__inner').fadeIn();
         }, 2000);
       //   setTimeout(function() { 
       //     $('.btn__confirm__day__container').fadeIn(500).addClass('animate__animated animate__slideInUp');
@@ -76,6 +80,7 @@ $(function() {
       }, 1250);
         setTimeout(function() { 
             $('#buddyeq__check').fadeIn();
+            $('.modal__overlay__inner').fadeIn();
         }, 2000);
       });
       $('.bm06').click(function() {
@@ -99,16 +104,17 @@ $(function() {
 
       // Modals
       $('.modal__overlay').click(function() {
-        $('.modal__overlay__inner').addClass('animate__animated animate__slideOutUp');
+       $('.modal__overlay__inner').fadeOut();
       });
 
       function hideAndShowGameplayModal() {
         $('.modal__gameplay').hide();
         $('.modal__congrats').show();
-        $('.modal__overlay__inner').removeClass("animate__slideOutUp").addClass('animate__slideInDown');
+        $('.modal__overlay__inner').fadeIn();
+        // $('.modal__overlay__inner').show().removeClass("animate__fadeOut").addClass('animate__fadeIn');
 
         function slideDownModal() {
-          $('.modal__overlay__inner').removeClass("animate__slideOutUp");
+          //$('.modal__overlay__inner').removeClass("animate__fadeOut");
           $('.modal__gameplay').show();
           $('.modal__congrats').hide();
         }
@@ -1410,42 +1416,49 @@ $(function() {
 
     $('.btn__repair').click(function() {
       $('.btn__repair').addClass('pe__none');
+      $('.fault__card').addClass('pe__none');
       setTimeout(function() { 
         $('.btn__repair').removeClass('pe__none');
+        $('.fault__card').removeClass('pe__none');
     }, 3000); 
     });
 
     $('.fc01').click(function() { 
-      $(this).addClass('fault__card__border').removeClass('fc__opacity');
-      $('.fault__card').not(this).removeClass('fault__card__border');
+      $(this).removeClass('fc__opacity');
+      // $('.fault__card').not(this).removeClass('fault__card__border');
       $('.fc02').addClass('fc__opacity');
       faultO4D367 = true;
-
-      if ( faultO4D367 === true && faultHotspotO4D367 === true ) {
-        console.log("Rotor bearings fault has been correctly found!")
-        fault01Complete = true;
-        flipFoundCards01()
-        if (fault01Complete == true && fault02Complete == true) {
-          completeDFMessage()
-        }
-      }
+      faultO2E821 = false;
+      // if ( faultO4D367 === true && faultHotspotO4D367 === true ) {
+      //   console.log("Rotor bearings fault has been correctly found!")
+      //   fault01Complete = true;
+      //   flipFoundCards01()
+      //   if (fault01Complete == true && fault02Complete == true) {
+      //     completeDFMessage()
+      //   }
+      // } else {
+      //   fault01Complete = false;
+      // }
     });
 
     $('.fc02').click(function() { 
-      $(this).addClass('fault__card__border').removeClass('fc__opacity');
-      $('.fault__card').not(this).removeClass('fault__card__border');
+      $(this).removeClass('fc__opacity');
+      // $('.fault__card').not(this).removeClass('fault__card__border');
       $('.fc01').addClass('fc__opacity');
       faultO2E821 = true;
+      faultO4D367 = false;
 
-      if ( faultO2E821 === true && faultHotspotO2E821 === true ) {
-        console.log("Gearbox fault has been correctly found!")
-        fault02Complete = true;
-        flipFoundCards02()
+      // if ( faultO2E821 === true && faultHotspotO2E821 === true ) {
+      //   console.log("Gearbox fault has been correctly found!")
+      //   fault02Complete = true;
+      //   flipFoundCards02()
 
-        if (fault01Complete == true && fault02Complete == true) {
-          completeDFMessage()
-        }
-      }
+      //   if (fault01Complete == true && fault02Complete == true) {
+      //     completeDFMessage()
+      //   }
+      // } else {
+      //   fault02Complete = false;
+      // }
     });
 
     // $('.btn__repair').click(function() { 
@@ -1482,7 +1495,9 @@ $(function() {
         if (fault01Complete == true && fault02Complete == true) {
           completeDFMessage()
         }
-      }
+      } else {
+        fault02Complete = false;
+    }
     });
     $('.btn__repair__hl02').click(function() { 
       faultHotspotO4D367 = false;
@@ -1558,6 +1573,8 @@ $(function() {
         if (fault01Complete == true && fault02Complete == true) {
           completeDFMessage()
         }
+      } else {
+          fault01Complete = false;
       }
 
       if ( faultO4D367 === true ) {
