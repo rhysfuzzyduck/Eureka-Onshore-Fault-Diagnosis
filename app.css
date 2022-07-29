@@ -442,6 +442,21 @@
     width: 1920px;
   }
 
+  .lf__contianer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .lf01 {
+    display: none;
+  }
+  .lf02 {
+    display: none;
+  }
+  /* .lf03 {
+    display: none;
+  } */
+
   .bigbad__map__container {
     position: absolute;
     top: 7.5%;
@@ -1369,6 +1384,88 @@
     top: 2264px;
     left: 3226px;
   }
+
+  /* MAP 02 */
+  .lf02 .bb1 {
+    top: 1949px;
+    left: 3283px;
+  }
+  .lf02 .bb2 {
+    top: 1525px;
+    left: 2668px;
+  }
+  .lf02 .bb3 {
+    top: 332px;
+    left: 612px;
+  }
+  .lf02 .bb4 {
+    top: 500px;
+    left: 2050px;
+  }
+  .lf02 .bb5 {
+    top: 2260px;
+    left: 2620px;
+    display: none;
+  }
+  .lf02 .bb5__repaired {
+    top: 2260px;
+    left: 2620px;
+  }
+  .lf02 .bb6 {
+    top: 560px;
+    left: 1080px;
+  }
+  .lf02 .bb7 {
+    top: 422px;
+    left: 2883px;
+  }
+  .lf02 .bb8 {
+    top: 2254px;
+    left: 1709px;
+  }
+  .lf02 .bb9 {
+    top: 3113px;
+    left: 1385px;
+  }
+  .lf02 .bb10 {
+    top: 1260px;
+    left: 1980px;
+  }
+  .lf02 .bb10__reboot {
+    top: 1260px;
+    left: 1980px;
+    display: none;
+  }
+  .lf02 .bb11 {
+    top: 1150px;
+    left: 1105px;
+  }
+  .lf02 .bb12 {
+    top: 3009px;
+    left: 510px;
+  }
+  .lf02 .bb12__repaired {
+    top: 3009px;
+    left: 510px;
+  }
+  .lf02 .bb13 {
+    top: 1650px;
+    left: 1205px;
+  }
+  .lf02 .bb14 {
+    top: 2632px;
+    left: 653px;
+  }
+  .lf02 .bb15 {
+    top: 3160px;
+    left: 3020px;
+  }
+  .lf02 .bb16 {
+    top: 1696px;
+    left: 550px;
+  }
+
+  
 
   .green__fill {
     fill: #00e737 !important;

@@ -3,27 +3,13 @@ $(function() {
 
   var loader = 0;
 
-    // $('#menu').hide();
-    // $('#vid01').hide();
-    // $('#vid02').hide();
-    // $('#vid03').hide();
-
-    $('#attractor').click(function() {
-        loader = 1;
-        $(this).fadeOut(750);
-        setTimeout(function() { 
-            $('#menu').fadeIn();
-        }, 1000);
-      });
-
       $('#info').click(function() {
+        loader = 1;
         $(this).fadeOut(750);
         setTimeout(function() { 
           $('#name').fadeIn();
       }, 1000);
       });
-
-
 
       $('.bm01').click(function() {
         $('.mb01').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
@@ -187,7 +173,7 @@ $(function() {
       
       //Idle timeout
       $(function() {
-        $(document).idleTimer(120000); //1 minute 60000
+        $(document).idleTimer(12000); //2 minute 120000
       
         $(document).on( "idle.idleTimer", function(event, elem, obj){
           //console.log("timed out");
@@ -506,9 +492,42 @@ $(function() {
     }
   }
 
+  var visits = $.cookie("visits") || 0;
+
   $('.btn__begin').click(function() {  
     $('#name').fadeOut(750);
-    console.clear();
+    function update_visit_count() {
+      // Get the old visit count, or 0 if this is his first time
+      //var visits = $.cookie("visits") || 0;
+      // Add 1 to it
+      visits++;
+      // Save the updated cookie
+      $.cookie("visits", visits);
+      console.log(visits);
+
+      if (visits === 1) {
+        console.log("visit = 1")
+        $('.lf01').show();
+        $('.lf02').hide();
+      } else if  (visits === 2) {
+        console.log("visit = 2")
+        $('.lf01').hide();
+        $('.lf02').show();
+        setTimeout(function() { 
+          $.removeCookie('visits');
+        }, 5000);
+      } 
+      // else if  (visits === 3) {
+      //   $.removeCookie('visits');
+      // } 
+      // else if  (visits === 4) {
+      //   $.removeCookie('visits');
+      // }
+       else {
+          console.log("FIN");
+      }
+  }
+  update_visit_count() ;
     setTimeout(function() { 
         $('#menu').fadeIn();
     }, 1000);
@@ -521,7 +540,9 @@ $(function() {
   var correctTurbineCounter = 0;
 
   $('.map').draggable({
-    containment: [-2500, -2500, 0, 0], scroll: false,
+    
+    containment: [-2500, -2500, 0, 0],
+    scroll: false,
       // containment: [-700, -822, 0, 0], scroll: false,
       //containment: [-1500, -1622, 0, 0], scroll: false,
       drag: function(event, ui) {
